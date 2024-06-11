@@ -32,7 +32,7 @@ export class Pokemon {
 
     async getMoves(): Promise<Move[]> {
         const { data } = await axios.get<PokeapiResponse>('https://pokeapi.co/api/v2/pokemon/4')
-        console.log( data.moves[0].move.name )
+        console.log( data.moves[0].move )
 
         return data.moves
 
