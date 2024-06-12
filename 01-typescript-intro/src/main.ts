@@ -12,4 +12,5 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
  <h4>${pokemons}</h4>
  <hr />
  <h5>${charmander.name} - ${charmander.id} - ${charmander.imageUrl}</h5>
+ <h6>Hi</h6>
 `
