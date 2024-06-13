@@ -2,7 +2,8 @@ import './style.css'
 
 import { nombre, age } from './bases/01-types.ts'
 import { pokemonIds, bulbasaur, pokemons } from './bases/02-objects.ts'
-import { Pokemon, charmander } from './bases/03-clases.ts'
+//import { charmander } from './bases/03-clases.ts'
+import { charmander } from './bases/04-injections.ts'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
  <h1>Hola, ${ nombre } ${ age }</h1>
@@ -11,6 +12,5 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
  <h3>${bulbasaur.name} ${bulbasaur.id} ${bulbasaur.age}</h3>
  <h4>${pokemons}</h4>
  <hr />
- <h5>${charmander.name} - ${charmander.id} - ${charmander.imageUrl}</h5>
- <h6>Hi</h6>
+ <h5>${charmander.name} - ${charmander.id} - ${charmander.imageUrl}</h5> 
 `

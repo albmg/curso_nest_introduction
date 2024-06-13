@@ -27,6 +27,7 @@ export interface Ability {
     slot:      number;
 }
 
+
 export interface Species {
     name: string;
     url:  string;
