@@ -1,6 +1,5 @@
-import axios from 'axios'
 import { Move, PokeapiResponse } from '../interfaces/pokeapi-response.interface'
-import { PokeApiAdapter, PokeApiFecthAdapter } from '../api/pokeApi.adapter'
+import { HttpAdapter, PokeApiAdapter, PokeApiFecthAdapter } from '../api/pokeApi.adapter'
 
 export class Pokemon {    
 
@@ -12,7 +11,7 @@ export class Pokemon {
         public readonly id: number,
         public name: string,    
         //Todo: inyectar dependencias     
-        private readonly http: PokeApiAdapter
+        private readonly http: HttpAdapter
     ) {}    
 
     scream() {
@@ -34,7 +33,8 @@ export class Pokemon {
 const pokeApiAxios = new PokeApiAdapter();
 const pokeApiFetch = new PokeApiFecthAdapter()
 
-export const charmander = new Pokemon( 4, 'Charmander', pokeApiFetch)
-export const pikachu = new Pokemon( 2, 'Pikachu', pokeApiFetch)
+export const charmander = new Pokemon( 4, 'Charmander', pokeApiAxios)
+
+//export const pikachu = new Pokemon( 2, 'Pikachu', pokeApiFetch)
 
 charmander.getMoves()
