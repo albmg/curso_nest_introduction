@@ -4,7 +4,8 @@ import { nombre, age } from './bases/01-types.ts'
 import { pokemonIds, bulbasaur, pokemons } from './bases/02-objects.ts'
 //import { charmander } from './bases/03-clases.ts'
 //import { charmander } from './bases/04-injections.ts'
-import { charmander } from './bases/05-decorators.ts'
+//import { charmander } from './bases/05-decorators.ts'
+import { charmander } from './bases/06-decorators.ts'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
  <h1>Hola, ${ nombre } ${ age }</h1>
